@@ -1,0 +1,12 @@
+{%  extends 'index.html' %}
+
+{% block content %}
+
+    <h1 class="home-header">Request a quote</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+    <button  class="btn" type="submit">Request</button>
+    </form>
+
+{% endblock %}

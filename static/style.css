@@ -1,0 +1,68 @@
+/*************/
+/****FONTS****/
+/*************/
+
+h1, h2, h3, h4, p, a, li {
+    color: #2f6f9f;
+    font-size: 19px;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+/**************/
+/*****INDEX****/
+/**************/
+.messages {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.brand {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid darkgrey;
+    padding: 10px;
+}
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    margin-top: 20px;
+}
+.contacts a img {
+    height: 25px;
+    width: auto;
+    margin: 10px;
+
+}
+
+.navbar-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+#slideshow img {
+    margin: 10px 0;
+    width: 100%;
+
+}
+
+
+.fade {
+    animation: fadein 4s;
+}
+
+@keyframes fadein {
+    0%{ opacity: 1;}
+    85%{opacity: 1;}
+    100%{opacity: 0;}
+}

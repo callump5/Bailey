@@ -16,8 +16,10 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from home.views import get_home
-
+from booking.views import *
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', get_home),
+    url(r'^bookings$', booking_list, name='bookings'),
+    url(r'^bookings/create$', create_booking)
 ]

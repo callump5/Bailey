@@ -1,0 +1,22 @@
+{
+  "name": "Bailey",
+  "homepage": "https://github.com/callump5/Bailey",
+  "authors": [
+    "Callum <clpullinger@gmail.com>"
+  ],
+  "description": "Booking system for gas&heating",
+  "main": "manage.py",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "bootstrap": "^4.1.1",
+    "bootstrap-datepicker": "^1.8.0"
+  }
+}

@@ -1,14 +1,111 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Bailey Gas & Heating</title>
-</head>
-<body>
-<h1>weg</h1>
-{% block content %}
+    <!--  jQuery -->
+    <script type="text/javascript" src="/static/lib/js/jquery.js"></script>
 
-{% endblock %}
+    <!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
+    <link rel="stylesheet" href="/static/lib/css/bootstrap.css" />
+
+    <!-- Bootstrap Date-Picker Plugin -->
+    <script type="text/javascript" src="/static/lib/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="/static/lib/css/bootstrap-datepicker3.css"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato|Poppins|Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/reset.css">
+    <link rel="stylesheet" href="/static/style.css">
+
+
+
+
+    {% block head_js %}
+
+    {% endblock %}
+
+</head>
+
+<body>
+<div class="container">
+
+    <nav class="mynavbar">
+
+        <div class="brand">
+
+            <img src="/static/imgs/Bailey.jpg">
+
+            <div class="contacts">
+                <p>0800 553 5447</p>
+                <a href="mailto:info@baileygas.co.uk">info@baileygas.co.uk</a>
+                <div>
+                    <a href="/"><img  href="/" src="/static/imgs/icons/facebook.png"></a>
+                    <a href="/"><img href='/' src="/static/imgs/icons/twitter.png"></a>
+                    <a href="/"><img href='/' src="/static/imgs/icons/linkedin.png"></a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <ul class="navbar-list">
+                <li><a href="/">Home</a></li>
+                <li><a href="/bookings">About Us</a></li>
+                <li><a href="/bookings">Services</a></li>
+                <li><a href="/bookings">Areas</a></li>
+                <li><a href="/bookings">Feedback & Gallery</a></li>
+                <li><a href="/bookings">Land Lords</a></li>
+                <li><a href="/bookings">Blog</a></li>
+                <li><a href="/bookings">Terms</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="container" id="slideshow">
+    <img class='mySlides fade' src="/static/imgs/banners/BGH-Banner-1.jpg">
+    <img class='mySlides fade' src="/static/imgs/banners/BGH-Banner-2.jpg">
+    <img class='mySlides fade' src="/static/imgs/banners/BGH-Banner-3.jpg">
+</div>
+
+
+
+
+
+{% include 'partials/messages.html' %}
+<div class="container content">
+    {% block content %}
+
+    {% endblock %}
+</div>
+
+
+<script type="text/javascript">
+        var slideIndex = 0;
+        carousel();
+
+
+        function carousel() {
+            var i;
+
+            var x = $(".mySlides");
+
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+
+            slideIndex++;
+
+            if (slideIndex > x.length) {slideIndex = 1}
+
+            x[slideIndex-1].style.display = "block";
+
+            setTimeout(carousel, 4000); // Change image every 2 seconds
+        }
+    </script>
+
+
 
 </body>
 </html>

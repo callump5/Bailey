@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    {% for booking in bookings %}
+        {{ booking.title }}
+        {{ booking.booking_date }}
+        {{ booking.booking_slot  }}:00
+        <br>
+    {% endfor %}
+
+{% endblock %}
