@@ -1,12 +1,40 @@
 {%  extends 'index.html' %}
+{% load bootstrap_tags %}
+
+
 
 {% block content %}
 
-    <h1 class="home-header">Request a quote</h1>
-    <form method="post">
+    <h1 class="title">Request a quote</h1>
+    <form class='form' method="post">
         {% csrf_token %}
-        {{ form }}
-    <button  class="btn" type="submit">Request</button>
+        {{ booking_form | as_bootstrap}}
+        <div class="gdpr datetime">
+            <input type="checkbox"  id="tick" onchange="document.getElementById('contact-btn').disabled = !this.checked;" />
+            <p>By using this form you agree with the storage and handling of your data by this website.</p>
+            <button type="submit" class="btn" name="contact-btn" id="contact-btn" disabled onclick="return clicked();">Request Quote</button>
+        </div>
+
     </form>
 
+
+    <script type="text/javascript">
+
+        $('#div_id_name').addClass('formfields');
+        $('#div_id_address').addClass('formfields');
+        $('#div_id_number').addClass('formfields');
+        $('#div_id_description').addClass('formfields');
+        $('#div_id_booking_date').addClass('datetime');
+        $('#div_id_booking_time').addClass('datetime');
+
+        $('.formfields').wrapAll(( "<div class='form_fields' />"));
+        $('.datetime').wrapAll(( "<div class='date_time' />"));
+
+
+        function clicked() {
+            var date = document.getElementById("id_booking_date").value;
+            var time = document.getElementById("id_booking_time").value;
+            return confirm('Confirm booking - ' + date + ' ' + time + ':00')
+        }
+    </script>
 {% endblock %}

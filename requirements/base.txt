@@ -1,0 +1,6 @@
+dj-database-url
+Django
+django-forms-bootstrap
+django-tinymce
+gunicorn
+pytz

@@ -2,9 +2,15 @@
 
 {% block content %}
     {% for booking in bookings %}
-        {{ booking.title }}
+        {{ booking.name }}
         {{ booking.booking_date }}
-        {{ booking.booking_slot  }}:00
+        {{ booking.booking_time  }}:00
+
+        {% autoescape off %}
+
+            {{ booking.description  }}
+        {% endautoescape %}
+
         <br>
     {% endfor %}
 

@@ -1,0 +1,137 @@
+:root {
+    --themecolor1: #2f6f9f;
+}
+/*************/
+/****FONTS****/
+/*************/
+
+h1, h2, h3, h4, p, a, li, label, button, textarea, input{
+    color: var(--themecolor1);
+    font-size: 19px;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+p {
+    line-height: 25px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+/**************/
+/*****INDEX****/
+/**************/
+
+body {
+    margin-bottom: 75px;
+}
+.messages {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.brand {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid darkgrey;
+    padding: 10px;
+}
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    margin-top: 20px;
+}
+.contacts a img {
+    height: 25px;
+    width: auto;
+    margin: 10px;
+
+}
+
+.navbar-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+#slideshow img {
+    margin: 10px 0;
+    width: 100%;
+
+}
+
+.fade {
+    animation: fadein 4s;
+}
+
+@keyframes fadein {
+    0%{ opacity: 1;}
+    85%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+.title {
+    font-size: 2em;
+    margin: 10px 0;
+
+}
+
+
+/*************/
+/****FORM*****/
+/*************/
+
+
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.form_fields {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.date_time {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.gdpr  {
+    display: flex;
+    flex-direction: row;
+}
+.gdpr input {
+    margin-right: 20px;
+}
+.gdpr p {
+    margin: 10px 0;
+}
+
+
+textarea {
+    height: 100px;
+    color: black;
+}
+
+button {
+    background-color: var(--themecolor1);
+    color: white;
+}
+
+
+

@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+
+{% block content %}
+
+    <h1 class="title">About Us</h1>
+
+    {% for foo in info %}
+        {% autoescape off %}
+            {{ foo.description }}
+        {% endautoescape %}
+    {% endfor %}
+
+{% endblock %}

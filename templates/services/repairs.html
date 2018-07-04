@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<h1 class="title">Services - Repairs & Maintenance </h1>
+    <div class="service-info">
+        {% for foo in info %}
+            {% autoescape off %}
+                {{ foo.description }}
+            {% endautoescape %}
+        {% endfor %}
+    </div>
+
+    <div class="services">
+        <ul>
+            {% for foo in repairs %}
+                <li>{{ foo }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
