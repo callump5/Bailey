@@ -2,6 +2,14 @@
 
 {% block content %}
 
-    <h1>Welcome to Bailey Gas & Heating Ltd</h1>
+    <h1 class="title">Welcome to Bailey Gas & Heating Ltd</h1>
+
+    {% for inf in info %}
+        {% autoescape off %}
+            {{ inf.description}}
+
+        {% endautoescape %}
+
+    {% endfor %}
 
 {% endblock %}

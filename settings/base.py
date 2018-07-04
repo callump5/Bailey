@@ -27,8 +27,9 @@ SECRET_KEY = '78w+@ui*xt#w8_qnpd9mo1*5*a(6giv)q(k_t+#u$0i)!%e%ge'
 
 
 ALLOWED_HOSTS = [
-    'bailey_gas.herokuapp.com',
-    '127.0.0.1',]
+    'bailey-gas.herokuapp.com',
+    '127.0.0.1',
+]
 
 
 # Application definition

@@ -5,28 +5,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Bailey Gas & Heating</title>
-    <!--  jQuery -->
+
+
     <script type="text/javascript" src="/static/lib/js/jquery.js"></script>
-
-    <!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
-    <link rel="stylesheet" href="/static/lib/css/bootstrap.css" />
-
-    <!-- Bootstrap Date-Picker Plugin -->
     <script type="text/javascript" src="/static/lib/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="/static/lib/css/bootstrap-datepicker3.css"/>
+    <script type="text/javascript" src="/static/lib/js/tinymce.min.js"></script>
+
 
     <link href="https://fonts.googleapis.com/css?family=Lato|Poppins|Roboto" rel="stylesheet">
-
+    <link rel="stylesheet" href="/static/lib/css/bootstrap.css" />
+    <link rel="stylesheet" href="/static/lib/css/bootstrap-datepicker3.css"/>
     <link rel="stylesheet" href="/static/reset.css">
     <link rel="stylesheet" href="/static/style.css">
-
-
-
 
     {% block head_js %}
 
     {% endblock %}
 
+    {% block head_css %}
+
+    {% endblock %}
 </head>
 
 <body>
@@ -51,17 +49,20 @@
         <div>
             <ul class="navbar-list">
                 <li><a href="/">Home</a></li>
-                <li><a href="/bookings">About Us</a></li>
-                <li><a href="/bookings">Services</a></li>
+                <li><a href="/about/">About Us</a></li>
+                <li><a href="/services/">Services</a></li>
+                <li><a href="/maintenance">Repairs & Maintenance</a></li>
                 <li><a href="/bookings">Areas</a></li>
-                <li><a href="/bookings">Feedback & Gallery</a></li>
                 <li><a href="/bookings">Land Lords</a></li>
-                <li><a href="/bookings">Blog</a></li>
+                <li><a href="/bookings/create">Book a Quote</a></li>
                 <li><a href="/bookings">Terms</a></li>
             </ul>
         </div>
     </nav>
 </div>
+
+
+{% include 'partials/messages.html' %}
 
 <div class="container" id="slideshow">
     <img class='mySlides fade' src="/static/imgs/banners/BGH-Banner-1.jpg">
@@ -73,7 +74,6 @@
 
 
 
-{% include 'partials/messages.html' %}
 <div class="container content">
     {% block content %}
 
