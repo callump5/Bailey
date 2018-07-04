@@ -4,3 +4,4 @@ django-forms-bootstrap
 django-tinymce
 gunicorn
 pytz
+whitenoise
